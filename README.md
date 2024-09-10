@@ -24,10 +24,10 @@ Untuk membuat sub direktori Januari, Februari, dan Maret secara bersamaan pada d
 ![image](https://github.com/user-attachments/assets/ccdd790a-d624-4164-94b9-808766203555)
 
 ### 3.	Buatlah file dataku yang berisi nama, nim dan alamat anda pada sub direktori januari dan copy-kan file tersebut ke sub direktori februari dan maret.
-Untuk membuat file dataku yang berisi nama, nim, dan alamat Anda pada sub direktori januari, Anda dapat menggunakan perintah touch untuk membuat file kosong dan kemudian menambahkan konten ke dalamnya.<br/>
+Untuk membuat file dataku yang berisi nama, nim, dan alamat Anda pada sub direktori januari, Anda dapat menggunakan perintah touch untuk membuat file kosong dan kemudian menambahkan konten ke dalamnya. echo -e ... > Latihan/Januari/Data: Menyimpan output teks ke dalam file Data di direktori Latihan/Januari.<br/>
 
 - touch Latihan/Januari/Data
-- echo "Nama: Elisa Dwi Nanda \nNim: 09011182328107 \nAlamat: Jl. Yos Sudarso, Bangka Belitung" > Latihan/Januari/Data
+- echo -e "Nama: Elisa Dwi Nanda \nNim: 09011182328107 \nAlamat: Jl. Yos Sudarso, Bangka Belitung" > Latihan/Januari/Data
 
 ![image](https://github.com/user-attachments/assets/cbc9fd54-4692-4eb7-a9b0-5917d2d872aa)
 
@@ -95,10 +95,10 @@ Namun, perlu diingat bahwa umask hanya berlaku untuk proses saat ini dan tidak s
 ### 10.	Buatlah link dari file dataku ke file dataku.ini dan file dataku.juga dan dengan perintah list perhatikan berapa link yang terjadi.
 Untuk membuat link dari file dataku ke file dataku.ini dan dataku.juga, Anda dapat menggunakan perintah ln.
 
-- ln latihan5/januari/dataku latihan5/januari/dataku.ini 
-- ln latihan5/januari/dataku latihan5/januari/dataku.juga 
+- ln Latihan/Januari/Data Latihan/Januari/Data.ini 
+- ln Latihan/Januari/Data Latihan/Januari/Data.juga 
 
-- ls -l latihan5/januari/  # Perhatikan berapa link yang terjadi
+- ls -l Latihan/Januari/  # Perhatikan berapa link yang terjadi
 
 ![image](https://github.com/user-attachments/assets/807084e7-6ddb-4faf-8005-e38272693063)
 
