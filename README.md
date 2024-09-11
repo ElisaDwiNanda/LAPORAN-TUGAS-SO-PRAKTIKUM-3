@@ -1,5 +1,35 @@
 # LAPORAN TUGAS SO PRAKTIKUM 3
-## Sebelum mengerjakan tugas, login terlebih dahulu ke sistem operasi Linux
+## Pendahuluan 
+### Latar Belakang Sistem File dalam Linux
+Sistem file adalah komponen fundamental dalam sistem operasi yang mengatur bagaimana data disimpan, diakses, dan dikelola di perangkat penyimpanan. Dalam konteks Linux, sistem file memainkan peran penting dalam pengelolaan data, memungkinkan pengguna untuk menyimpan, mengatur, dan mengakses informasi dengan cara yang efisien dan terstruktur. Linux, sebagai sistem operasi open-source yang mendukung berbagai jenis perangkat keras dan aplikasi, menyediakan berbagai opsi sistem file yang memungkinkan penyesuaian dan optimasi untuk berbagai kebutuhan.
+
+Linux menggunakan struktur hierarki yang unik untuk mengatur file dan direktori. Semua file dan direktori berada di bawah direktori root (/), menciptakan satu pohon direktori yang konsisten dan memudahkan akses data di seluruh sistem. Setiap file dalam sistem file Linux memiliki inode, yang menyimpan metadata seperti ukuran, hak akses, dan lokasi data di disk. Inode memungkinkan sistem untuk mengelola file dengan efisiensi tinggi tanpa menyimpan nama file, yang disimpan dalam direktori terpisah.
+
+Sistem file di Linux tidak hanya tentang pengelolaan data, tetapi juga mencakup kontrol akses yang ketat, yang memungkinkan pengaturan hak akses yang terperinci untuk file dan direktori. Ini memastikan integritas dan keamanan data dalam lingkungan multi-pengguna. Selain itu, Linux mendukung berbagai jenis sistem file, masing-masing dengan fitur dan kelebihan tersendiri, seperti ext4, XFS, Btrfs, F2FS, serta sistem file yang kompatibel dengan Windows seperti NTFS dan VFAT.
+
+ext4, sebagai salah satu sistem file yang paling banyak digunakan di Linux, dikenal karena stabilitas, kecepatan, dan dukungannya untuk fitur-fitur modern seperti pemulihan setelah kegagalan. XFS, di sisi lain, terkenal dengan kemampuannya untuk menangani file besar dan volume data yang besar, serta fitur-fitur seperti snapshot dan manajemen volume. Btrfs, sistem file yang lebih baru, menawarkan fitur-fitur canggih seperti snapshot dan pengelolaan ruang yang efisien, dirancang untuk memenuhi kebutuhan penyimpanan yang lebih kompleks. F2FS, yang dioptimalkan untuk perangkat penyimpanan berbasis flash seperti SSD, memberikan kinerja baca/tulis yang lebih baik.
+
+Dengan berbagai jenis sistem file yang tersedia, Linux memberikan fleksibilitas yang luas dalam pengelolaan data, memungkinkan pengguna untuk memilih sistem file yang paling sesuai dengan kebutuhan mereka. Dukungan untuk berbagai alat dan perintah dalam Linux juga memudahkan manajemen sistem file, mulai dari pembuatan dan pemeriksaan sistem file hingga pengelolaan partisi dan volume.
+
+Secara keseluruhan, sistem file dalam Linux adalah elemen penting yang mempengaruhi kinerja, keamanan, dan efisiensi sistem. Kemampuan Linux untuk mendukung berbagai sistem file dan mengintegrasikan berbagai media penyimpanan dalam satu struktur direktori menunjukkan fleksibilitas dan kekuatan dari sistem operasi ini.
+
+### Alat dan Bahan
+- Laptop/PC
+- Virtual Box
+- Linux Ubuntu 24.04 LTS
+
+### Dasar Teori
+Sistem file dalam Linux adalah struktur yang mengatur bagaimana data disimpan dan diakses pada perangkat penyimpanan. Konsep dasar sistem file melibatkan penggunaan struktur hierarki, di mana semua file dan direktori berada di bawah direktori root (/). Setiap file diidentifikasi oleh inode, yang menyimpan metadata seperti ukuran, hak akses, dan lokasi data di disk, sementara nama file disimpan dalam direktori.
+
+Sistem file Linux mengelola ruang penyimpanan dengan membagi disk menjadi blok, yang dialokasikan untuk file. Teknik mounting memungkinkan berbagai sistem file dan partisi diintegrasikan ke dalam hierarki direktori, memberikan fleksibilitas dalam pengelolaan penyimpanan.
+
+Untuk meningkatkan keandalan, banyak sistem file Linux menggunakan journaling, yang mencatat perubahan sebelum diterapkan untuk melindungi data dari kerusakan. Sistem file modern seperti Btrfs dan F2FS menawarkan fitur canggih seperti snapshot dan optimasi untuk media penyimpanan berbasis flash. Linux juga mendukung sistem file dari platform lain, seperti NTFS dan VFAT, untuk kompatibilitas lintas platform.
+
+Memahami dasar teori sistem file ini penting untuk mengelola data secara efisien dan memanfaatkan berbagai fitur yang disediakan oleh sistem file Linux.
+
+## Pembahasan
+
+### Sebelum mengerjakan tugas, login terlebih dahulu ke sistem operasi Linux
 -	Login ke root dengan perintah sudo su
 -	Kemudian masukan password
   ![image](https://github.com/user-attachments/assets/41c6141c-688c-49fa-af39-b3ba3fa1aaba)
@@ -103,3 +133,10 @@ Untuk membuat link dari file dataku ke file dataku.ini dan dataku.juga, Anda dap
 ![image](https://github.com/user-attachments/assets/807084e7-6ddb-4faf-8005-e38272693063)
 
 Perintah ls -l akan menampilkan informasi detail tentang file dan direktori, termasuk jumlah link (hard link atau symbolic link) yang ada. Dalam kasus ini, Anda akan melihat bahwa dataku.ini dan dataku.juga memiliki satu link simbolis masing-masing ke dataku.
+
+## Kesimpulan
+Sistem file dalam Linux memainkan peran krusial dalam pengelolaan data pada perangkat penyimpanan. Dengan struktur hierarki yang dimulai dari direktori root, sistem file Linux mengatur file dan direktori secara terstruktur, memudahkan akses dan pengorganisasian data. Konsep inode memungkinkan pengelolaan metadata file secara efisien, sedangkan teknik mounting memberikan fleksibilitas dalam mengintegrasikan berbagai sistem file dan partisi ke dalam satu struktur direktori.
+
+Teknik journaling yang diterapkan pada banyak sistem file Linux, seperti ext4 dan XFS, meningkatkan keandalan dengan mencatat perubahan sebelum diterapkan, melindungi data dari kerusakan. Sistem file modern, termasuk Btrfs dan F2FS, menawarkan fitur tambahan seperti snapshot dan optimasi untuk media penyimpanan berbasis flash, meningkatkan kinerja dan pengelolaan data. Dukungan untuk sistem file lintas platform seperti NTFS dan VFAT juga mempermudah interoperabilitas dengan sistem lain.
+
+Secara keseluruhan, sistem file Linux menyediakan kerangka kerja yang fleksibel dan kuat untuk pengelolaan data, menawarkan berbagai fitur dan opsi yang dapat disesuaikan untuk memenuhi kebutuhan spesifik pengguna dan aplikasi.
